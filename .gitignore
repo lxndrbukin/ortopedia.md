@@ -1,0 +1,7 @@
+# backend
+.venv/
+__pycache__/
+
+# frontend
+frontend/assets/
+node_modules/

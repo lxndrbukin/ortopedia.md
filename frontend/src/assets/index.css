@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ---------- Brand colours ---------- */
+  --color-primary: #0f5a6b; /* buttons, links, logo */
+  --color-primary-hover: #0a3f4b;
+  --color-highlight: #f2b33d; /* sunflower: logo dot, badges, help cards (use dark text on it) */
+
+  /* ---------- Text ---------- */
+  --color-heading: #10303a;
+  --color-text: #1b2b33; /* body text */
+  --color-text-muted: #3d4f57; /* paragraphs, descriptions */
+  --color-text-subtle: #4a5b63; /* labels, meta, breadcrumbs */
+  --color-text-on-dark: #ffffff;
+  --color-text-on-dark-muted: #c8d9de;
+
+  /* ---------- Surfaces ---------- */
+  --color-bg: #ffffff;
+  --color-surface-tint: #f4f9fa; /* hero, alternating sections */
+  --color-surface-soft: #eef5f6; /* chips, category tiles, selected states */
+  --color-surface-product: #f1f5f6; /* product image backgrounds */
+  --color-surface-accent: #dcebee; /* hero image, article images */
+  --color-surface-dark: #10303a; /* "Why ORTOPEDIA" section */
+  --color-surface-dark-raised: #17414d; /* cards inside the dark section */
+  --color-footer: #0a2a33;
+
+  /* ---------- Borders ---------- */
+  --color-border: #dce6e9; /* cards */
+  --color-border-strong: #c9d6da; /* inputs, size buttons */
+  --color-divider: #e3eaec; /* header line, table rows */
+  --color-border-on-dark: #1f4550;
+
+  /* ---------- Placeholder / icons ---------- */
+  --color-icon-muted: #5c7a82;
+
+  /* ---------- Status ---------- */
+  --color-success: #1e6b3a;
+  --color-success-bg: #e7f4ec;
+
+  /* ---------- Typography ---------- */
+  --font-display: 'Nunito', system-ui, sans-serif; /* headings, logo, prices */
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+  --weight-black: 900; /* Nunito headings */
+
+  --text-xs: 0.75rem; /* 12px  badges, small labels */
+  --text-sm: 0.875rem; /* 14px  meta, chips */
+  --text-base: 1rem; /* 16px  body */
+  --text-md: 1.0625rem; /* 17px  card titles, intro text */
+  --text-lg: 1.125rem; /* 18px  product names, hero paragraph */
+  --text-xl: 1.375rem; /* 22px  store names */
+  --text-2xl: 1.75rem; /* 28px  product-page section headings */
+  --text-3xl: 2.125rem; /* 34px  section headings */
+  --text-4xl: 2.75rem; /* 44px  page titles (catalogue) */
+  --text-hero: clamp(2.5rem, 5vw, 4rem); /* 40–64px homepage headline */
+
+  --leading-tight: 1.1;
+  --leading-snug: 1.3;
+  --leading-normal: 1.5;
+
+  --tracking-label: 0.04em; /* uppercase meta labels */
+  --tracking-eyebrow: 0.1em; /* uppercase section eyebrows */
+
+  /* ---------- Spacing (4px scale) ---------- */
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem; /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem; /* 16px */
+  --space-5: 1.25rem; /* 20px */
+  --space-6: 1.5rem; /* 24px */
+  --space-7: 1.75rem; /* 28px */
+  --space-8: 2rem; /* 32px */
+  --space-10: 2.5rem; /* 40px */
+  --space-12: 3rem; /* 48px */
+  --space-14: 3.5rem; /* 56px */
+  --space-16: 4rem; /* 64px */
+  --space-18: 4.5rem; /* 72px  section padding */
+
+  /* ---------- Radius ---------- */
+  --radius-xs: 6px; /* language switch */
+  --radius-sm: 12px; /* inputs, small buttons, icon boxes */
+  --radius-md: 14px; /* main buttons */
+  --radius-lg: 20px; /* cards, product images */
+  --radius-xl: 28px; /* product gallery */
+  --radius-2xl: 32px; /* hero image */
+  --radius-pill: 999px; /* chips, badges, search */
+
+  /* ---------- Shadows ---------- */
+  --shadow-float: 0 12px 32px rgb(16 48 58 / 0.14); /* floating hero card */
+  --shadow-bar: 0 -8px 24px rgb(16 48 58 / 0.08); /* mobile bottom bar */
+
+  /* ---------- Layout ---------- */
+  --container-max: 1200px;
+  --container-padding: var(--space-6);
+  --touch-target: 44px; /* minimum size for anything tappable */
+
+  /* ---------- Focus ---------- */
+  --focus-ring: 0 0 0 3px rgb(242 179 61 / 0.9); /* highlight-coloured, visible on teal and white */
+
+  /* ---------- Motion ---------- */
+  --transition-fast: 150ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0ms;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header-top {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-dark);
+  padding: var(--space-4);
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4);
+  box-sizing: border-box;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.header-bottom-logo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.header-bottom-logo-text {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-black);
+  font-family: var(--font-display);
+  color: var(--color-primary);
+
+  span {
+    color: var(--color-highlight);
+  }
+}
+
+.header-bottom-logo-text-small {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-regular);
+}
+
+.header-bottom-menu {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.header-bottom-menu-item {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header-bottom-menu-item a {
+  display: block;
+  text-decoration: none;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+  color: #000;
+  font-weight: bold;
+  &:hover {
+    background-color: var(--color-surface-tint);
+  }
+}
+
+.header-bottom-search {
+  display: flex;
+  gap: var(--space-2);
+  flex: 1;
+  max-width: 300px;
+  height: 50px;
+  align-items: center;
+}
+
+.header-bottom-search-input {
+  flex: 1;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  outline: none;
+  border-radius: var(--radius-xl);
+  max-width: 250px;
+  height: 50px;
+  box-sizing: border-box;
+  &:focus {
+    border-color: var(--color-primary);
+  }
+}
+
+.header-bottom-search-button {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-dark);
+  padding: var(--space-2) var(--space-2);
+  border-radius: var(--radius-xl);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  margin-left: -55px;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  &:hover {
+    background-color: var(--color-primary-hover);
+  }
+}
+
+.header-bottom-search-button-text {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-regular);
+  color: var(--color-text-on-dark);
+}
+
+.header-top-language {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.header-top-language-text {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.header-top-language-text {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-regular);
+  color: var(--color-text-on-dark);
+}
