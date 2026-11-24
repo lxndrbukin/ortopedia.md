@@ -1,4 +1,13 @@
 from fastapi import FastAPI, APIRouter
+from db import engine, Base
+from db_models.items import Item, ItemTranslation, ItemImage
+from db_models.categories import (
+    Category, 
+    CategoryTranslation, 
+    CategoryImage
+)
+
+Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title="Ortopedia.MD",
