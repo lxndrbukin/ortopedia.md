@@ -1,9 +1,12 @@
 import { type JSX } from 'react';
+import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { SUPPORTED_LANGUAGES } from '../../i18n';
+import { type AppDispatch, setLanguage } from '../../store';
 
 export default function LanguageSwitch(): JSX.Element {
-  const { t, i18n } = useTranslation();
+  const dispatch = useDispatch<AppDispatch>();
+  const { t } = useTranslation();
 
   return (
     <div
@@ -17,8 +20,7 @@ export default function LanguageSwitch(): JSX.Element {
           type='button'
           lang={lang}
           className='language-switch-option'
-          aria-pressed={i18n.resolvedLanguage === lang}
-          onClick={() => i18n.changeLanguage(lang)}
+          onClick={() => dispatch(setLanguage(lang))}
         >
           {lang.toUpperCase()}
         </button>
