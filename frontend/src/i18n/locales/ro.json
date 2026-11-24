@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "homeTitle": "Ortopedia — Acasă"
+  },
+  "header": {
+    "openDaily_one": "Deschis zilnic · {{count}} magazin: {{stores}}",
+    "openDaily_few": "Deschis zilnic · {{count}} magazine: {{stores}}",
+    "openDaily_other": "Deschis zilnic · {{count}} de magazine: {{stores}}",
+    "languageSwitchLabel": "Limbă",
+    "logoTagline": "încălțăminte ortopedică pentru copii",
+    "nav": {
+      "label": "Principal",
+      "catalog": "Catalog",
+      "sizeGuide": "Ghid de mărimi",
+      "tips": "Sfaturi",
+      "stores": "Magazine"
+    },
+    "search": {
+      "label": "Caută",
+      "placeholder": "Caută după model sau cod",
+      "submit": "Caută"
+    },
+    "categoriesLabel": "Categorii"
+  },
+  "hero": {
+    "badge": "Mărimile 18–30 · ORTOPEDIA, Dr. Mymi, Perlina",
+    "title": "Pași sănătoși de la primul pantof.",
+    "text_one": "Încălțăminte ortopedică pentru copii, gândită pentru creșterea sănătoasă a piciorului. Alegeți modelul online, apoi veniți la probă în magazinul nostru.",
+    "text_few": "Încălțăminte ortopedică pentru copii, gândită pentru creșterea sănătoasă a piciorului. Alegeți modelul online, apoi veniți la probă în unul din cele {{count}} magazine.",
+    "text_other": "Încălțăminte ortopedică pentru copii, gândită pentru creșterea sănătoasă a piciorului. Alegeți modelul online, apoi veniți la probă în unul din cele {{count}} de magazine.",
+    "ctaCatalog": "Vezi catalogul",
+    "ctaSize": "Alege după mărime",
+    "perks": {
+      "shockPoint": "Sistem Shock Point",
+      "openDaily": "Deschis 7 zile din 7",
+      "fitting": "Probă în magazin"
+    },
+    "imagePlaceholder": "Fotografie: copil purtând ghete ORTOPEDIA",
+    "card": {
+      "eyebrow": "Sezonul rece",
+      "title": "Ghete de iarnă"
+    }
+  },
+  "sizeShop": {
+    "title": "Alege după mărimea copilului",
+    "subtitle": "Toate modelele sunt grupate pe intervale de mărimi, ca să găsiți rapid ce se potrivește.",
+    "ranges": {
+      "firstSteps": "Primii pași",
+      "toddlers": "Copii mici",
+      "preschoolers": "Preșcolari"
+    },
+    "meta": {
+      "bootsShoesSandals": "Ghete, pantofi, sandale",
+      "allCategories": "Toate categoriile"
+    },
+    "cta": "Vezi modelele",
+    "help": {
+      "title": "Nu știți mărimea?",
+      "text": "Ghid pas cu pas: cum măsurați piciorul copilului acasă.",
+      "cta": "Deschide ghidul"
+    }
+  },
+  "categories": {
+    "title": "Categorii",
+    "imagePlaceholder": "Foto categorie"
+  },
+  "why": {
+    "eyebrow": "De ce ORTOPEDIA",
+    "title": "Creată pentru piciorul care crește.",
+    "text": "Fiecare pereche ORTOPEDIA pornește de la sănătatea piciorului copilului. Recomandăm întotdeauna proba în magazin și consultul medicului ortoped atunci când e nevoie.",
+    "link": "Citește specificațiile anatomice și ortopedice",
+    "features": {
+      "shockPoint": {
+        "title": "Sistemul Shock Point",
+        "text": "Sistemul propriu ORTOPEDIA, creat pentru sănătatea piciorului în creștere."
+      },
+      "materials": {
+        "title": "Materiale igienice, testate",
+        "text": "Materiale importate, verificate tehnologic, care lasă piciorul să respire."
+      },
+      "leather": {
+        "title": "Piele naturală",
+        "text": "Modele din piele, inclusiv colecția Perlina, cu design italian."
+      },
+      "fitting": {
+        "title": "Probă în magazin",
+        "text": "Veniți cu copilul și alegeți mărimea potrivită împreună cu consultantul."
+      }
+    }
+  },
+  "newArrivals": {
+    "title": "Noutăți",
+    "viewAll": "Toate produsele"
+  },
+  "product": {
+    "imagePlaceholder": "Foto produs",
+    "code": "cod {{code}}",
+    "sizes": "Mărimi {{sizes}}",
+    "price": "{{price}} lei"
+  },
+  "brands": {
+    "label": "Branduri",
+    "ortopedia": "Brandul nostru, cu sistemul Shock Point și materiale testate.",
+    "drMymi": "Încălțăminte anatomică pentru copii, produsă din anul 2000.",
+    "perlina": "Design italian, fabricată în Turcia, din piele naturală."
+  },
+  "guides": {
+    "title": "Sfaturi pentru părinți",
+    "subtitle": "Cum alegeți, măsurați și îngrijiți încălțămintea copilului.",
+    "viewAll": "Toate articolele",
+    "imagePlaceholder": "Ilustrație articol",
+    "read": "Citește"
+  },
+  "stores": {
+    "title": "Veniți la probă",
+    "text": "Mărimea potrivită se alege cel mai bine pe piciorul copilului. Toate magazinele sunt deschise 7 zile din 7.",
+    "phoneLabel": "Telefon pentru toate magazinele",
+    "imagePlaceholder": "Hartă / foto magazin",
+    "hours": "Zilnic, {{hours}}",
+    "directions": "Cum ajung"
+  },
+  "footer": {
+    "tagline": "Încălțăminte ortopedică pentru copii. ORTOPEDIA, Dr. Mymi, Perlina.",
+    "headings": {
+      "catalog": "Catalog",
+      "info": "Informații",
+      "contact": "Contact"
+    },
+    "links": {
+      "sizeGuide": "Ghid de mărimi",
+      "parentTips": "Sfaturi pentru părinți",
+      "storesAndHours": "Magazine și program",
+      "about": "Despre noi"
+    },
+    "copyright": "© {{year}} Ortopedia SRL. Toate drepturile rezervate."
+  }
+}

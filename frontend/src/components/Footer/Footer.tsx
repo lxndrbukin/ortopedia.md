@@ -1,32 +1,33 @@
 import { type JSX } from 'react';
+import { useTranslation } from 'react-i18next';
 import type { Category } from '../../types';
 import { CONTACT, SOCIALS } from '../../data/site';
 import Logo from '../Static/Logo';
 
 const INFO_LINKS = [
-  { href: '/#marime', label: 'Ghid de mărimi' },
-  { href: '/#sfaturi', label: 'Sfaturi pentru părinți' },
-  { href: '/#magazine', label: 'Magazine și program' },
-  { href: '#', label: 'Despre noi' },
-];
+  { href: '/#marime', labelKey: 'footer.links.sizeGuide' },
+  { href: '/#sfaturi', labelKey: 'footer.links.parentTips' },
+  { href: '/#magazine', labelKey: 'footer.links.storesAndHours' },
+  { href: '#', labelKey: 'footer.links.about' },
+] as const;
 
 interface FooterProps {
   categories: Category[];
 }
 
 export default function Footer({ categories }: FooterProps): JSX.Element {
+  const { t } = useTranslation();
+
   return (
     <footer className='footer'>
       <div className='container footer-inner'>
         <div className='footer-column footer-brand'>
           <Logo className='footer-logo' />
-          <span>
-            Încălțăminte ortopedică pentru copii. ORTOPEDIA, Dr. Mymi, Perlina.
-          </span>
+          <span>{t('footer.tagline')}</span>
         </div>
 
-        <nav className='footer-column' aria-label='Catalog'>
-          <span className='footer-heading'>Catalog</span>
+        <nav className='footer-column' aria-label={t('footer.headings.catalog')}>
+          <span className='footer-heading'>{t('footer.headings.catalog')}</span>
           {categories.map((category) => (
             <a
               key={category.slug}
@@ -38,17 +39,17 @@ export default function Footer({ categories }: FooterProps): JSX.Element {
           ))}
         </nav>
 
-        <nav className='footer-column' aria-label='Informații'>
-          <span className='footer-heading'>Informații</span>
+        <nav className='footer-column' aria-label={t('footer.headings.info')}>
+          <span className='footer-heading'>{t('footer.headings.info')}</span>
           {INFO_LINKS.map((link) => (
-            <a key={link.label} href={link.href} className='footer-link'>
-              {link.label}
+            <a key={link.labelKey} href={link.href} className='footer-link'>
+              {t(link.labelKey)}
             </a>
           ))}
         </nav>
 
         <div className='footer-column'>
-          <span className='footer-heading'>Contact</span>
+          <span className='footer-heading'>{t('footer.headings.contact')}</span>
           <a href={CONTACT.phoneHref} className='footer-link footer-phone'>
             {CONTACT.phone}
           </a>
@@ -71,7 +72,7 @@ export default function Footer({ categories }: FooterProps): JSX.Element {
         </div>
       </div>
       <div className='container footer-bottom'>
-        © {new Date().getFullYear()} Ortopedia SRL. Toate drepturile rezervate.
+        {t('footer.copyright', { year: new Date().getFullYear() })}
       </div>
     </footer>
   );

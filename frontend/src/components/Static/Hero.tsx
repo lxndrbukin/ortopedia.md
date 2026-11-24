@@ -1,36 +1,39 @@
 import { type JSX } from 'react';
+import { useTranslation } from 'react-i18next';
 import { STORES } from '../../data/site';
 import ImagePlaceholder from './ImagePlaceholder';
 
-const PERKS = ['Sistem Shock Point', 'Deschis 7 zile din 7', 'Probă în magazin'];
+const PERK_KEYS = [
+  'hero.perks.shockPoint',
+  'hero.perks.openDaily',
+  'hero.perks.fitting',
+] as const;
 
 export default function Hero(): JSX.Element {
+  const { t } = useTranslation();
+
   return (
     <section className='hero'>
       <div className='container hero-inner'>
         <div className='hero-content'>
-          <span className='hero-badge'>
-            Mărimile 18–30 · ORTOPEDIA, Dr. Mymi, Perlina
-          </span>
-          <h1 className='hero-title'>Pași sănătoși de la primul pantof.</h1>
+          <span className='hero-badge'>{t('hero.badge')}</span>
+          <h1 className='hero-title'>{t('hero.title')}</h1>
           <p className='hero-text'>
-            Încălțăminte ortopedică pentru copii, gândită pentru creșterea
-            sănătoasă a piciorului. Alegeți modelul online, apoi veniți la probă
-            în unul din cele {STORES.length} magazine.
+            {t('hero.text', { count: STORES.length })}
           </p>
           <div className='hero-actions'>
             <a href='/catalog' className='button button-primary'>
-              Vezi catalogul
+              {t('hero.ctaCatalog')}
             </a>
             <a href='/#marime' className='button button-outline'>
-              Alege după mărime
+              {t('hero.ctaSize')}
             </a>
           </div>
           <ul className='hero-perks'>
-            {PERKS.map((perk) => (
-              <li key={perk} className='hero-perk'>
+            {PERK_KEYS.map((key) => (
+              <li key={key} className='hero-perk'>
                 <i className='fa-solid fa-check' aria-hidden='true'></i>
-                {perk}
+                {t(key)}
               </li>
             ))}
           </ul>
@@ -39,15 +42,15 @@ export default function Hero(): JSX.Element {
           <ImagePlaceholder
             className='hero-image'
             iconSize={120}
-            label='Fotografie: copil purtând ghete ORTOPEDIA'
+            label={t('hero.imagePlaceholder')}
           />
           <a href='/catalog?categorie=ghete-de-iarna' className='hero-card'>
             <span className='hero-card-icon'>
               <i className='fa-solid fa-snowflake' aria-hidden='true'></i>
             </span>
             <span className='hero-card-text'>
-              <span className='hero-card-eyebrow'>Sezonul rece</span>
-              <span className='hero-card-title'>Ghete de iarnă →</span>
+              <span className='hero-card-eyebrow'>{t('hero.card.eyebrow')}</span>
+              <span className='hero-card-title'>{t('hero.card.title')} →</span>
             </span>
           </a>
         </div>

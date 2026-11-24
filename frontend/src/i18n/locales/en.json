@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "homeTitle": "Ortopedia — Home"
+  },
+  "header": {
+    "openDaily_one": "Open daily · {{count}} store: {{stores}}",
+    "openDaily_other": "Open daily · {{count}} stores: {{stores}}",
+    "languageSwitchLabel": "Language",
+    "logoTagline": "orthopedic footwear for children",
+    "nav": {
+      "label": "Main",
+      "catalog": "Catalog",
+      "sizeGuide": "Size guide",
+      "tips": "Tips",
+      "stores": "Stores"
+    },
+    "search": {
+      "label": "Search",
+      "placeholder": "Search by model or code",
+      "submit": "Search"
+    },
+    "categoriesLabel": "Categories"
+  },
+  "hero": {
+    "badge": "Sizes 18–30 · ORTOPEDIA, Dr. Mymi, Perlina",
+    "title": "Healthy steps from the very first shoe.",
+    "text_one": "Orthopedic footwear for children, designed for healthy foot development. Choose a model online, then come in for a fitting at our store.",
+    "text_other": "Orthopedic footwear for children, designed for healthy foot development. Choose a model online, then come in for a fitting at one of our {{count}} stores.",
+    "ctaCatalog": "Browse the catalog",
+    "ctaSize": "Shop by size",
+    "perks": {
+      "shockPoint": "Shock Point system",
+      "openDaily": "Open 7 days a week",
+      "fitting": "In-store fitting"
+    },
+    "imagePlaceholder": "Photo: child wearing ORTOPEDIA boots",
+    "card": {
+      "eyebrow": "Cold season",
+      "title": "Winter boots"
+    }
+  },
+  "sizeShop": {
+    "title": "Shop by your child's size",
+    "subtitle": "All models are grouped by size range, so you can quickly find what fits.",
+    "ranges": {
+      "firstSteps": "First steps",
+      "toddlers": "Toddlers",
+      "preschoolers": "Preschoolers"
+    },
+    "meta": {
+      "bootsShoesSandals": "Boots, shoes, sandals",
+      "allCategories": "All categories"
+    },
+    "cta": "See models",
+    "help": {
+      "title": "Not sure of the size?",
+      "text": "Step-by-step guide: how to measure your child's foot at home.",
+      "cta": "Open the guide"
+    }
+  },
+  "categories": {
+    "title": "Categories",
+    "imagePlaceholder": "Category photo"
+  },
+  "why": {
+    "eyebrow": "Why ORTOPEDIA",
+    "title": "Made for growing feet.",
+    "text": "Every ORTOPEDIA pair starts with the health of your child's foot. We always recommend trying shoes on in store and seeing an orthopedist when needed.",
+    "link": "Read the anatomical and orthopedic specifications",
+    "features": {
+      "shockPoint": {
+        "title": "Shock Point system",
+        "text": "ORTOPEDIA's own system, designed for the health of growing feet."
+      },
+      "materials": {
+        "title": "Hygienic, tested materials",
+        "text": "Imported, technically tested materials that let the foot breathe."
+      },
+      "leather": {
+        "title": "Genuine leather",
+        "text": "Leather models, including the Perlina collection with Italian design."
+      },
+      "fitting": {
+        "title": "In-store fitting",
+        "text": "Bring your child and choose the right size together with our consultant."
+      }
+    }
+  },
+  "newArrivals": {
+    "title": "New arrivals",
+    "viewAll": "All products"
+  },
+  "product": {
+    "imagePlaceholder": "Product photo",
+    "code": "code {{code}}",
+    "sizes": "Sizes {{sizes}}",
+    "price": "{{price}} lei"
+  },
+  "brands": {
+    "label": "Brands",
+    "ortopedia": "Our own brand, with the Shock Point system and tested materials.",
+    "drMymi": "Anatomical footwear for children, made since 2000.",
+    "perlina": "Italian design, made in Turkey from genuine leather."
+  },
+  "guides": {
+    "title": "Tips for parents",
+    "subtitle": "How to choose, measure and care for your child's shoes.",
+    "viewAll": "All articles",
+    "imagePlaceholder": "Article illustration",
+    "read": "Read"
+  },
+  "stores": {
+    "title": "Come in for a fitting",
+    "text": "The right size is best chosen on your child's foot. All our stores are open 7 days a week.",
+    "phoneLabel": "Phone for all stores",
+    "imagePlaceholder": "Map / store photo",
+    "hours": "Daily, {{hours}}",
+    "directions": "Get directions"
+  },
+  "footer": {
+    "tagline": "Orthopedic footwear for children. ORTOPEDIA, Dr. Mymi, Perlina.",
+    "headings": {
+      "catalog": "Catalog",
+      "info": "Information",
+      "contact": "Contact"
+    },
+    "links": {
+      "sizeGuide": "Size guide",
+      "parentTips": "Tips for parents",
+      "storesAndHours": "Stores and opening hours",
+      "about": "About us"
+    },
+    "copyright": "© {{year}} Ortopedia SRL. All rights reserved."
+  }
+}

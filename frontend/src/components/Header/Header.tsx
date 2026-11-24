@@ -1,21 +1,23 @@
 import { type JSX } from 'react';
+import { useTranslation } from 'react-i18next';
 import type { Category } from '../../types';
 import { CONTACT, STORES } from '../../data/site';
 import Logo from '../Static/Logo';
 import LanguageSwitch from './LanguageSwitch';
 
 const NAV_LINKS = [
-  { href: '/catalog', label: 'Catalog' },
-  { href: '/#marime', label: 'Ghid de mărimi' },
-  { href: '/#sfaturi', label: 'Sfaturi' },
-  { href: '/#magazine', label: 'Magazine' },
-];
+  { href: '/catalog', labelKey: 'header.nav.catalog' },
+  { href: '/#marime', labelKey: 'header.nav.sizeGuide' },
+  { href: '/#sfaturi', labelKey: 'header.nav.tips' },
+  { href: '/#magazine', labelKey: 'header.nav.stores' },
+] as const;
 
 interface HeaderProps {
   categories: Category[];
 }
 
 export default function Header({ categories }: HeaderProps): JSX.Element {
+  const { t } = useTranslation();
   const storeNames = STORES.map((store) => store.name).join(', ');
 
   return (
@@ -23,7 +25,10 @@ export default function Header({ categories }: HeaderProps): JSX.Element {
       <div className='utility-bar'>
         <div className='container utility-bar-inner'>
           <span>
-            Deschis zilnic · {STORES.length} magazine: {storeNames}
+            {t('header.openDaily', {
+              count: STORES.length,
+              stores: storeNames,
+            })}
           </span>
           <div className='utility-bar-actions'>
             <a href={CONTACT.phoneHref} className='utility-bar-phone'>
@@ -39,36 +44,46 @@ export default function Header({ categories }: HeaderProps): JSX.Element {
           <a href='/' className='header-logo'>
             <Logo />
             <span className='header-logo-tagline'>
-              încălțăminte ortopedică pentru copii
+              {t('header.logoTagline')}
             </span>
           </a>
 
-          <nav className='header-nav' aria-label='Principal'>
+          <nav className='header-nav' aria-label={t('header.nav.label')}>
             {NAV_LINKS.map((link) => (
               <a key={link.href} href={link.href} className='header-nav-link'>
-                {link.label}
+                {t(link.labelKey)}
               </a>
             ))}
           </nav>
 
           <form className='search' role='search' action='/catalog' method='get'>
             <label htmlFor='search-query' className='sr-only'>
-              Caută
+              {t('header.search.label')}
             </label>
             <input
               id='search-query'
               name='q'
               type='search'
               className='search-input'
-              placeholder='Caută după model sau cod'
+              placeholder={t('header.search.placeholder')}
             />
-            <button type='submit' className='search-button' aria-label='Caută'>
-              <i className='fa-solid fa-magnifying-glass' aria-hidden='true'></i>
+            <button
+              type='submit'
+              className='search-button'
+              aria-label={t('header.search.submit')}
+            >
+              <i
+                className='fa-solid fa-magnifying-glass'
+                aria-hidden='true'
+              ></i>
             </button>
           </form>
         </div>
 
-        <nav className='container header-chips' aria-label='Categorii'>
+        <nav
+          className='container header-chips'
+          aria-label={t('header.categoriesLabel')}
+        >
           {categories.map((category) => (
             <a
               key={category.slug}

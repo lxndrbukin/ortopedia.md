@@ -1,4 +1,5 @@
 import { type JSX } from 'react';
+import { useTranslation } from 'react-i18next';
 import type { Guide } from '../../types';
 import SectionHeader from '../Static/SectionHeader';
 import ImagePlaceholder from '../Static/ImagePlaceholder';
@@ -8,13 +9,15 @@ interface GuidesProps {
 }
 
 export default function Guides({ guides }: GuidesProps): JSX.Element {
+  const { t } = useTranslation();
+
   return (
     <section id='sfaturi' className='guides'>
       <div className='container guides-inner'>
         <SectionHeader
-          title='Sfaturi pentru părinți'
-          subtitle='Cum alegeți, măsurați și îngrijiți încălțămintea copilului.'
-          link={{ href: '#', label: 'Toate articolele' }}
+          title={t('guides.title')}
+          subtitle={t('guides.subtitle')}
+          link={{ href: '#', label: t('guides.viewAll') }}
         />
         <div className='guides-grid'>
           {guides.map((guide) => (
@@ -25,12 +28,12 @@ export default function Guides({ guides }: GuidesProps): JSX.Element {
             >
               <ImagePlaceholder
                 className='guide-card-image'
-                label='Ilustrație articol'
+                label={t('guides.imagePlaceholder')}
               />
               <div className='guide-card-body'>
                 <span className='guide-card-tag'>{guide.tag}</span>
                 <span className='guide-card-title'>{guide.title}</span>
-                <span className='guide-card-cta'>Citește →</span>
+                <span className='guide-card-cta'>{t('guides.read')} →</span>
               </div>
             </a>
           ))}
